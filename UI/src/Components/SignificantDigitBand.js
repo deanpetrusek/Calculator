@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Band from './Band'
 
 class SignificantDigitBand extends Band {
@@ -7,7 +7,11 @@ class SignificantDigitBand extends Band {
       this.textFormat = (color) => { return color.Color + " (" + color.SignificantFigures + ")"};
     }
     render(){
-      var colors = this.props.colors.filter(x => x.SignificantFigures != null);
+      var colors = [];
+      if(this.props.colors !== undefined){
+        colors = this.props.colors.filter(x => x.SignificantFigures != null);
+      }
+      
       return <Band colors={colors} 
         itemTextFormat={this.textFormat}
         label={this.props.label}

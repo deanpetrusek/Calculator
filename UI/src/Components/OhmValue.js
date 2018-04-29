@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 class OhmValue extends Component {
-    constructor(props){
-      super(props);
-    }
     render(){
       const style = {
         textAlign: "center",

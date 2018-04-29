@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Band from './Band'
 
 class MultiplierBand extends Band {
@@ -7,7 +7,10 @@ class MultiplierBand extends Band {
       this.textFormat = (color) => { return color.Color + " (x" + color.Multiplier + ")"};
     }
     render(){
-      var colors = this.props.colors.filter(x => x.Multiplier != null);
+      var colors = [];
+      if(this.props.colors !== undefined){
+        colors = this.props.colors.filter(x => x.Multiplier != null);
+      }
       return <Band colors={colors} 
         itemTextFormat={this.textFormat}
         label={this.props.label}

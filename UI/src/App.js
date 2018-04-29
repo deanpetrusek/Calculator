@@ -6,22 +6,30 @@ import OhmValue from './Components/OhmValue'
 import ToleranceBand from './Components/ToleranceBand'
 import MultiplierBand from './Components/MultiplierBand'
 import SignificantDigitBand from './Components/SignificantDigitBand'
+import LoadFailedDialog from './Components/LoadFailedDialog'
 
 class App extends Component {
   async componentDidMount(){
-    var results = await GetAllColors();
+    await this.getInitialData();
+  }
+  constructor(props){
+    super(props);
+    this.state = {allColors: []};
+  }
+  setInitialState(results){
     this.setState({
       allColors: results,
       firstBand: null,
       secondBand: null,
       thirdBand: null,
       fourthBand: null,
-      ohmValue: null
+      ohmValue: null,
+      loadFailed: results === undefined
     });
   }
-  constructor(props){
-    super(props);
-    this.state = {allColors: []};
+  async getInitialData(){
+    var results = await GetAllColors();
+    this.setInitialState(results);
   }
   canGetValue(){
     var valueAvailable = this.state.firstBand != null
@@ -47,13 +55,20 @@ class App extends Component {
       marginRight: "auto",
       width: "256px"
     }
+    
+    var didLoadFail = this.state.allColors === undefined;
     var setFirstBand = (e,i,v) => {this.setStateAndGetData({firstBand: v})};
     var setSecondBand = (e,i,v) => {this.setStateAndGetData({secondBand: v})};
     var setThirdBand = (e,i,v) => {this.setStateAndGetData({thirdBand: v})};
     var setFourthBand = (e,i,v) => {this.setStateAndGetData({fourthBand: v})};
+    var reloadFunction = () => { this.getInitialData(); };
+    
     return (
       <MuiThemeProvider>
         <div style={style}>
+          <LoadFailedDialog 
+            open={didLoadFail}
+            reloadAction={reloadFunction}/>
           <h2>Ohm Value Calculator</h2>
           <SignificantDigitBand 
             digitName="1st"
