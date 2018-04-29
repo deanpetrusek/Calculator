@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "OhmCalculator\Api.csproj", "{28854961-EC77-460B-BF2C-ECA60233FBFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{64215AB0-C2F9-4E2C-915A-DC88F3895C0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Tests", "Core.Tests\Core.Tests.csproj", "{26E62DEA-E315-4DF0-AABA-62AB8498FA9D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{28854961-EC77-460B-BF2C-ECA60233FBFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28854961-EC77-460B-BF2C-ECA60233FBFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28854961-EC77-460B-BF2C-ECA60233FBFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28854961-EC77-460B-BF2C-ECA60233FBFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64215AB0-C2F9-4E2C-915A-DC88F3895C0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64215AB0-C2F9-4E2C-915A-DC88F3895C0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64215AB0-C2F9-4E2C-915A-DC88F3895C0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64215AB0-C2F9-4E2C-915A-DC88F3895C0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26E62DEA-E315-4DF0-AABA-62AB8498FA9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26E62DEA-E315-4DF0-AABA-62AB8498FA9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26E62DEA-E315-4DF0-AABA-62AB8498FA9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26E62DEA-E315-4DF0-AABA-62AB8498FA9D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {64843D0B-67E9-455C-994B-E137FB3EF181}
+	EndGlobalSection
+EndGlobal
