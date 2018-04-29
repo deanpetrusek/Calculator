@@ -241,7 +241,7 @@ namespace OhmCalculator
                         // the Swagger 2.0 specification, you can enable UI support as shown below.
                         //
                         //c.EnableOAuth2Support("test-client-id", "test-realm", "Swagger UI");
-                    });
+                    }).EnableSwaggerUi();
         }
     }
 
