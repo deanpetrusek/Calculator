@@ -1,0 +1,7 @@
+bin
+Backend/.vs/
+Backend/Core.Tests/obj/
+Backend/Core/obj/
+Backend/OhmCalculator/obj/
+Backend/packages/
+UI/node_modules/
